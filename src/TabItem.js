@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 class TabItem extends Component {
     componentWillMount() {
-        debugger;
         this.props.tabs.addTabItem(this);
     }
 
