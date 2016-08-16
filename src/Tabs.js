@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 class Tabs extends Component {
     constructor() {
         super();
-        this.panes = [];
         this.state = {panes: [], selected: null};
         this.selectTab = this.selectTab.bind(this);
     }
@@ -15,8 +14,8 @@ class Tabs extends Component {
     }
 
     addTabItem(pane) {
-        this.panes = [...this.panes, pane];
-        this.setState({panes: this.panes},
+        this.setState(
+            ({panes})=> ({panes: [...panes, pane]}),
             this.ifAllRegistered);
     }
 
