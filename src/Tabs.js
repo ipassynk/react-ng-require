@@ -11,9 +11,7 @@ class Tabs extends Component {
     getTabItems() {
         // we can pass the whole component to child
         return React.Children.map(this.props.children,
-            (tab, index) => {
-                return React.cloneElement(tab, {tabs: this, selected: index === this.state.selected})
-            });
+            (tab, index) => React.cloneElement(tab, {tabs: this, selected: index === this.state.selected}));
     }
 
     addTabItem(pane) {
