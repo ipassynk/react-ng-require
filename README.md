@@ -1,0 +1,1 @@
+React way to pass the whole component to a child and child will call the parents. Use tabs as example
